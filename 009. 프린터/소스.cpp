@@ -1,5 +1,6 @@
 //스택&큐
 //특정 위치가 필요할 때 인덱스 컨테이너 하나 따로 만들거나 페어를 타입으로 하는 컨테이너 만들기
+//최대값은 정렬이 아니라 max_element 사용하기
 
 #include <string>
 #include <vector>
@@ -11,52 +12,31 @@ using namespace std;
 
 int solution(vector<int> priorities, int location) {
 
-	queue<int> prior;
-	queue<char> loc;
+	queue<int> indexes;
 
 	//큐에 집어넣기
-	for (auto d : priorities)
-		prior.push(d);
-
-	//위치 큐
 	for (size_t i = 0; i < priorities.size(); i++)
 	{
-		if (location == i)
-			loc.push('O');
-		else
-			loc.push('X');
+		indexes.push(i);
 	}
-
-	//정렬하기
-	sort(priorities.rbegin(), priorities.rend());
 
 	int cnt = 0;
 
 	while (true)
 	{
-		//큐 제일 앞이 맥스넘버인지 확인
-		if (prior.front() == priorities[0])
+		int front = indexes.front();
+		if (priorities[front] == *max_element(priorities.begin(), priorities.end()))
 		{
-			if (loc.front() == 'X')
-			{
-				prior.pop();
-				loc.pop();
-				++cnt;
-				//맥스넘버교체
-				priorities.erase(priorities.begin());
-			}
-			else
-				return ++cnt;
+			++cnt;
+			priorities[front] = 0;
+			if (location == front)
+				return cnt;
+			indexes.pop();
 		}
-		else 
+		else
 		{
-			int tmp = prior.front();
-			prior.pop();
-			prior.push(tmp);
-
-			int tmp2 = loc.front();
-			loc.pop();
-			loc.push(tmp2);
+			indexes.pop();
+			indexes.push(front);
 		}
 	}
 }
