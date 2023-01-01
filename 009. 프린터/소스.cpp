@@ -1,6 +1,6 @@
 //스택&큐
 //특정 위치가 필요할 때 인덱스 컨테이너 하나 따로 만들거나 페어를 타입으로 하는 컨테이너 만들기
-//최대값은 정렬이 아니라 max_element 사용하기
+//최댓값은 정렬이 아니라 max_element 사용하기
 
 #include <string>
 #include <vector>
