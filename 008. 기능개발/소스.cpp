@@ -14,10 +14,7 @@ vector<int> solution(vector<int> progresses, vector<int> speeds) {
 
 	for (size_t i = 0; i < length; i++)
 	{
-		int day = ceil((100 - progresses[i]) / (float)speeds[i]);
-
-		cout << day << endl;
-
+		int day = (99 - progresses[i]) / (float)speeds[i] + 1;
 		days.push_back(day);
 	}
 
