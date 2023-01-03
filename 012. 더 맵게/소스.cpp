@@ -14,10 +14,9 @@
 using namespace std;
 
 int solution(vector<int> scoville, int K) {
-	int cnt = 0;
 	priority_queue<int, vector<int>, greater<int>> scov_queue(scoville.begin(), scoville.end());
 
-	while (true)
+	for (size_t cnt = 0; ; cnt++)
 	{
 		int first_min = scov_queue.top();
 		if (first_min >= K)
@@ -28,14 +27,8 @@ int solution(vector<int> scoville, int K) {
 
 		scov_queue.pop();
 
-		auto second_min = scov_queue.top();
-
+		scov_queue.push(first_min + scov_queue.top() * 2);
 		scov_queue.pop();
-
-		int mix = first_min + second_min * 2;
-		scov_queue.push(mix);
-
-		++cnt;
 	}
 }
 
