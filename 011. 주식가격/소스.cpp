@@ -9,19 +9,23 @@ vector<int> solution(vector<int> prices) {
     size_t length = prices.size();
     for (size_t i = 0; i < length; ++i)
     {
-        int time = -1;
-        for (size_t j = i; j < length; ++j)
+        int time = 1;
+        for (size_t j = i+1; j < length; ++j)
         {
-            time += 1;
             if (prices[i] > prices[j])
             {
                 times.push_back(time);
                 break;
             }
-			if (j == length - 1)
+            if (j == length - 1)
+            {
                 times.push_back(time);
+                break;
+            }
+            time += 1;
         }
     }
+    times.push_back(0);
     return times;
 }
 
