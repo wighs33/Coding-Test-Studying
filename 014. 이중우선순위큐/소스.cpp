@@ -1,5 +1,5 @@
 //힙
-//sstream을 쓰면 스트링안 문자와 숫자를 간단하게 분리할 수 있다.
+//sstream을 쓰면 스트링 안 문자와 숫자를 간단하게 분리할 수 있다.
 
 #include <string>
 #include <vector>
@@ -43,11 +43,6 @@ vector<int> solution(vector<string> operations) {
 int main()
 {
     for (auto d : solution({ "I 16", "I -5643", "D -1", "D 1", "D 1", "I 123", "D -1" }))
-    {
-        cout << d << ' ';
-    }
-
-    for (auto d : solution({ "I -45", "I 653", "D 1", "I -642", "I 45", "I 97", "D 1", "D -1", "I 333" }))
     {
         cout << d << ' ';
     }
