@@ -12,7 +12,7 @@ void mix_func(string mix, int pos, string numbers)
 	//사이즈가 채워질 때 조합
 	if (pos == mix.size())
 	{
-		//cout << "mix: " << mix << endl;
+		cout << "mix: " << mix << endl;
 		return;
 	}
 
@@ -30,6 +30,14 @@ void mix_func(string mix, int pos, string numbers)
 
 int main()
 {
+	//string numbers;
+	//numbers.resize(findings.size());
+
+	//for (int i = 0; i < findings.size(); i++)
+	//{
+	//	numbers[i] = i + '0';
+	//}
+
 	string numbers = "01234";
 
 	string mix;
