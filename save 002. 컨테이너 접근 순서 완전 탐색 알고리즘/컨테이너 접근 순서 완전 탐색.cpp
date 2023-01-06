@@ -5,7 +5,7 @@
 using namespace std;
 
 int answer = 0;
-vector<int> dungeons;
+vector<int> To_Search;
 int N;
 
 int visit[8];
@@ -24,7 +24,7 @@ void dfs(int h){
         
         visit[i] = 1;
         //전역변수로 컨테이너에 visit대로 접근하기
-        cout << dungeons[i] << endl;
+        cout << To_Search[i] << endl;
         dfs(h+1);
         cout <<"상위노드로"<< endl;
         visit[i] = 0;
@@ -33,8 +33,8 @@ void dfs(int h){
 
 int main()
 {
-    dungeons = { 0,1,2 };
-    N = dungeons.size();
+    To_Search = { 0,1,2 };
+    N = To_Search.size();
 
     dfs(0);
 }
