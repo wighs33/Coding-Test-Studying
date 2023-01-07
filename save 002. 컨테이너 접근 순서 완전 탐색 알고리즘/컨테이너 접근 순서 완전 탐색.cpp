@@ -14,7 +14,11 @@ void dfs(int h){
         answer = h;
 
     cout << "h : " << h << endl;
-    cout << visit[0] << visit[1]<< visit[2]<< endl;
+    for (auto& i : visit)
+    {
+        cout << i;
+    }
+    cout << endl << endl;
 
     for(int i=0; i<N; i++){
         if (visit[i])

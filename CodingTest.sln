@@ -101,6 +101,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "save 001. 모든 조합 탐
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "save 002. 컨테이너 접근 순서 완전 탐색 알고리즘", "save 002. 컨테이너 접근 순서 완전 탐색 알고리즘\save 002. 컨테이너 접근 순서 완전 탐색 알고리즘.vcxproj", "{974A99E8-FEAD-40D3-838A-8A6AFB6C3D19}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "save 003. 그래프 탐색 알고리즘 DFS", "save 003. 그래프 탐색 알고리즘 DFS\save 003. 그래프 탐색 알고리즘 DFS.vcxproj", "{46A4C728-BB19-4EB2-A119-B68D46E6556C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -501,6 +503,14 @@ Global
 		{974A99E8-FEAD-40D3-838A-8A6AFB6C3D19}.Release|x64.Build.0 = Release|x64
 		{974A99E8-FEAD-40D3-838A-8A6AFB6C3D19}.Release|x86.ActiveCfg = Release|Win32
 		{974A99E8-FEAD-40D3-838A-8A6AFB6C3D19}.Release|x86.Build.0 = Release|Win32
+		{46A4C728-BB19-4EB2-A119-B68D46E6556C}.Debug|x64.ActiveCfg = Debug|x64
+		{46A4C728-BB19-4EB2-A119-B68D46E6556C}.Debug|x64.Build.0 = Debug|x64
+		{46A4C728-BB19-4EB2-A119-B68D46E6556C}.Debug|x86.ActiveCfg = Debug|Win32
+		{46A4C728-BB19-4EB2-A119-B68D46E6556C}.Debug|x86.Build.0 = Debug|Win32
+		{46A4C728-BB19-4EB2-A119-B68D46E6556C}.Release|x64.ActiveCfg = Release|x64
+		{46A4C728-BB19-4EB2-A119-B68D46E6556C}.Release|x64.Build.0 = Release|x64
+		{46A4C728-BB19-4EB2-A119-B68D46E6556C}.Release|x86.ActiveCfg = Release|Win32
+		{46A4C728-BB19-4EB2-A119-B68D46E6556C}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
