@@ -8,7 +8,7 @@ int answer = 0;
 vector<int> To_Search;
 int N;
 
-int visit[8];
+int visit[3];
 void dfs(int h){
     if(answer < h)
         answer = h;
