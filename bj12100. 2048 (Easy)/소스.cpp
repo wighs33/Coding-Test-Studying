@@ -176,24 +176,6 @@ void find_max(int lev) {
 			int a = *max_element(v.begin(), v.end());
 			max_num = max(max_num, a);
 		}
-
-		//출력
-		static int check = 0;
-		if (!check && max_num == 64)
-			check = 1;
-		if (check == 1)
-		{
-			check = 2;
-			cout << lev << "층" << endl;
-			for (auto& v : board)
-			{
-				for (auto& d : v)
-				{
-					cout << d << ' ';
-				}
-				cout << endl;
-			}
-		}
 		return;
 	}
 
@@ -209,78 +191,19 @@ void find_max(int lev) {
 
 int main()
 {
-	while (true)
-	{
-		g_N = 0;
-		max_num = 0;
-		board.clear();
+	int N;
+	cin >> N;
+	board.resize(N);
+	g_N = N;
 
-		int N;
-		cin >> N;
-		board.resize(N);
-		g_N = N;
+	int in;
+	for (int i = 0; i < N; i++)
+		for (int j = 0; j < N; j++)
+		{
+			cin >> in;
+			board[i].push_back(in);
+		}
 
-		int in;
-		for (int i = 0; i < N; i++)
-			for (int j = 0; j < N; j++)
-			{
-				cin >> in;
-				board[i].push_back(in);
-			}
-
-		find_max(0);
-		cout << max_num << endl;
-	}
-
-	//auto tmp = board;
-	//left_move();
-	////출력
-	//for (auto& v : board)
-	//{
-	//	for (auto& d : v)
-	//	{
-	//		cout << d << ' ';
-	//	}
-	//	cout << endl;
-	//}
-	//cout << endl;
-
-	//board = tmp;
-	//right_move();
-	////출력
-	//for (auto& v : board)
-	//{
-	//	for (auto& d : v)
-	//	{
-	//		cout << d << ' ';
-	//	}
-	//	cout << endl;
-	//}
-	//cout << endl;
-
-	//board = tmp;
-	//up_move();
-	////출력
-	//for (auto& v : board)
-	//{
-	//	for (auto& d : v)
-	//	{
-	//		cout << d << ' ';
-	//	}
-	//	cout << endl;
-	//}
-	//cout << endl;
-
-	//board = tmp;
-	//down_move();
-	////출력
-	//for (auto& v : board)
-	//{
-	//	for (auto& d : v)
-	//	{
-	//		cout << d << ' ';
-	//	}
-	//	cout << endl;
-	//}
-	//cout << endl;
+	find_max(0);
+	cout << max_num << endl;
 }
